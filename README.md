@@ -58,3 +58,4 @@ ipc.on('ipc-renderer', (...arg) =>{
   console.log('message', arg[1])
 })
 ```
+__主进程建议使用require/module.exports进行模块引用和输出，如需使用import/export在主进程目录增加babel模块即可__
