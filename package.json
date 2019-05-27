@@ -4,9 +4,7 @@
     "private": true,
     "scripts": {
         "dev": "node electron/index.dev.js",
-        "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build && cd electron && yarn build && cd ..",
-        "lint": "vue-cli-service lint"
+        "build": "vue-cli-service build && cd electron && yarn build && cd .."
     },
     "dependencies": {
         "core-js": "^2.6.5",
