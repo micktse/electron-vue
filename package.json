@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
+        "setup": "yarn && cd electron && yarn && cd ..",
         "dev": "node electron/index.dev.js",
         "build": "vue-cli-service build && cd electron && yarn build && cd .."
     },
