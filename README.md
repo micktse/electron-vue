@@ -41,6 +41,7 @@ electron/dist           二进制及安装程序输出目录（构建程序时�
 ```
 src                     vue源程序文件夹
 public                  vue模版及静态文件夹
+vue.config.js           vue配置文件（配置输出目录、输出路径、资源文件路径）
 ```
 ##  进程间通信
 ### 主进程
