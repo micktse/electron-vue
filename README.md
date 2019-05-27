@@ -47,7 +47,7 @@ vue.config.js           vue配置文件（配置输出目录、输出路径、�
 ### 主进程
 ```
 let { ipcMain } = require('electron')
-ipcMain.on('ipc-main', (event, message) =>{
+ipcMain.on('ipc-main', (event, message) => {
   event.sender.send('ipc-renderer', message + 'bar')
 })
 ```
@@ -55,8 +55,8 @@ ipcMain.on('ipc-main', (event, message) =>{
 *ipc无需进行引入或声明可全局使用*
 ```
 ipc.send('ipc-main', 'foo')
-ipc.on('ipc-renderer', (...arg) =>{
-  console.log('message', arg[1])
+ipc.on('ipc-renderer', (...args) => {
+  console.log('message', args[1])
 })
 ```
 __主进程建议使用require/module.exports进行模块引用和输出，如需使用import/export在主进程目录增加babel模块即可__
