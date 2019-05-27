@@ -8,17 +8,6 @@
 </template>
 <script>
 export default {
-  data(){
-    return{
-      result : undefined
-    }
-  },
-  mounted(){
-    ipc.send('test')
-    ipc.once('test', (...arg)=>{
-      this.result = arg[1]
-    })
-  }
 }
 </script>
 

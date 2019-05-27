@@ -1,8 +1,5 @@
-const { app, BrowserWindow, ipcMain } = require('electron')
+const { app, BrowserWindow } = require('electron')
 const path = require('path')
-ipcMain.on('test', event => {
-	event.sender.send('test', 'test ipc success')
-})
 let mainWindow
 function createWindow() {
 	let { screen } = require('electron')
@@ -29,7 +26,6 @@ function createWindow() {
 	})
 }
 app.on('ready', createWindow)
-
 app.on('window-all-closed', function() {
 	if (process.platform !== 'darwin') app.quit()
 })
